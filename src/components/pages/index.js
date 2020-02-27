@@ -280,11 +280,13 @@ export default class Pages extends PureComponent {
       [horizontal? 'y' : 'x']: 0,
     };
 
+
     return (
       <ScrollView
         {...props}
         style={[styles.container, style, scrollStyle]}
         onScroll={this.onScroll}
+        scrollEnabled={this.props.scrollEnabled}
         onScrollBeginDrag={this.onScrollBeginDrag}
         onScrollEndDrag={this.onScrollEndDrag}
         contentOffset={contentOffset}
